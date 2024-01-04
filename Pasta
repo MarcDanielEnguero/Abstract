@@ -1,0 +1,46 @@
+package Abstract;
+
+public class Pasta extends Menu{
+	int orderNum, order;
+	double price;
+	double pesto = 25.50;
+	double tinapaFlakes = 23.65;
+	double truffle = 38.90;
+	
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	void showList() {
+		System.out.println("Pasta Dishes");
+		System.out.println
+		("0. No Pasta			$0" + "\n" + 
+		"1. Pesto			$25.50" + "\n" + 
+		"2. Tinapa Flakes			$23.65" + "\n" +
+		"3. Truffle			$38.90");
+	}
+	
+	public void setOrderNum(int orderNum) {
+		this.orderNum = orderNum;
+	}
+
+
+	public int getOrderNum() {
+		return orderNum;
+	}
+
+	public int getOrder() {
+		return order;
+	}
+
+	public void setOrder(int order) {
+		this.order = order;
+	}
+	
+	
+	
+}
