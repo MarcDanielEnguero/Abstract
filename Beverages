@@ -1,0 +1,52 @@
+package Abstract;
+
+public class Beverages extends Menu{
+	int orderNum, order;
+	double price;
+	double cappucinoT = 3.30;
+	double cappucinoG = 5.75;
+	double cappucinoV = 8.25;
+	double caramelMachT = 4.20;
+	double caramelMachG = 6.40;
+	double caramelMachV = 9.85;
+	double matchaLatT = 2.20;
+	double matchaLatG = 4.95;
+	double matchaLatV = 7.00;
+	
+	@Override
+	void showList() {
+		System.out.println("Beverages");
+		System.out.println(
+		"0. No Beverages		$0.00" + "\n" + 
+		"1. Cappucino			(Tall $3.30, Grande $5.75, Venti $8.25)" + "\n" + 
+		"2. Caramel Macchiato			(Tall $4.20, Grande $6.40, Venti $9.85)" + "\n" + 
+		"3. Matcha Latte			(Tall $2.20, Grande $4.95, Venti $7.00)");
+	}
+	
+	public void setOrderNum(int orderNum) {
+		this.orderNum = orderNum;
+	}
+
+
+	public int getOrderNum() {
+		return orderNum;
+	}
+
+	public int getOrder() {
+		return order;
+	}
+
+	public void setOrder(int order) {
+		this.order = order;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	
+	
+}
