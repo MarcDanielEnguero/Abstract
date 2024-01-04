@@ -1,0 +1,139 @@
+package Abstract;
+import java.util.*;
+
+public class main {
+
+	public static void main(String[] args) {
+		Menu p =  new Pasta();
+		Menu ps = new Pastries();
+		Menu b = new Beverages();
+		Scanner sc = new Scanner(System.in);
+		String name;
+		int tableNum, quantity = 0, size = 0, currentOrderNum;
+		
+		System.out.println("NAPA-bili");
+		System.out.print("Name: ");
+		name = sc.next();
+		System.out.println("Table Number: ");
+		tableNum = sc.nextInt();
+		
+		p.showList();
+		System.out.print("Order number: ");
+		p.setOrderNum(sc.nextInt());
+		
+		if (p.getOrderNum() == 1) {
+			System.out.print("Please enter quantity: ");
+			quantity = sc.nextInt();
+		} else if (p.getOrderNum() == 2) {
+			System.out.print("Please enter quantity: ");
+			quantity = sc.nextInt();
+		} else if (p.getOrderNum() == 3) { 
+			System.out.print("Please enter quantity: ");
+			quantity = sc.nextInt();
+		}
+		
+		
+		ps.showList();
+		System.out.print("Order number: ");
+		ps.setOrderNum(sc.nextInt());
+		if (ps.getOrderNum() == 1) {
+			System.out.print("Please enter quantity: ");
+			quantity = sc.nextInt();
+		} else if (ps.getOrderNum() == 2) {
+			System.out.print("Please enter quantity: ");
+			quantity = sc.nextInt();
+		} else if (ps.getOrderNum() == 3) { 
+			System.out.print("Please enter quantity: ");
+			quantity = sc.nextInt();
+		} else if (ps.getOrderNum() == 4) { 
+			System.out.print("Please enter quantity: ");
+			quantity = sc.nextInt();
+		} else if (ps.getOrderNum() == 5) { 
+			System.out.print("Please enter quantity: ");
+			quantity = sc.nextInt();
+		}
+		
+		b.showList();
+		System.out.print("Order number: ");
+		b.setOrderNum(sc.nextInt());
+		if (b.getOrderNum() == 1) {
+			System.out.print("Please enter size: ");
+			size = sc.nextInt();
+			System.out.print("Please enter quantity: ");
+			quantity = sc.nextInt();
+		} else if (b.getOrderNum() == 2) {
+			System.out.print("Please enter size: ");
+			size = sc.nextInt();
+			System.out.print("Please enter quantity: ");
+			quantity = sc.nextInt();
+		} else if (b.getOrderNum() == 3) { 
+			System.out.print("Please enter size: ");
+			size = sc.nextInt();
+			System.out.print("Please enter quantity: ");
+			quantity = sc.nextInt();
+		}
+		
+		
+		
+		
+		System.out.println("NAPA-bili" + "\n" + "Official Receipt");
+		System.out.println("Name: " + name);
+		System.out.println("Table Number: " + tableNum);
+		System.out.println();
+		System.out.println("Order(s):" );
+		if (p.getOrderNum() == 1) {
+			System.out.println("1. Pesto			$25.50");
+			System.out.println(quantity + "x");
+		} else if (p.getOrderNum() == 2) {
+			System.out.println("2. Tinapa Flakes			$23.65");
+			System.out.println(quantity + "x");
+		} else if (p.getOrderNum() == 3) {
+			System.out.println("3. Truffle			$38.90");
+			System.out.println(quantity + "x");
+		}
+		
+		if (ps.getOrderNum() == 1) {
+			System.out.println("1. Cinamon Roll			$15.95");
+			System.out.println(quantity + "x");
+		} else if (ps.getOrderNum() == 2) {
+			System.out.println("2. Croissant			$17.55");
+			System.out.println(quantity + "x");
+		} else if (ps.getOrderNum() == 3) {
+			System.out.println("3. Blueberry Cheesecake			$17.25");
+			System.out.println(quantity + "x");
+		} else if (ps.getOrderNum() == 4) {
+			System.out.println("4. Strawberry Cheesecake			$16.80");
+			System.out.println(quantity + "x");
+		}
+		
+		if (b.getOrderNum() == 1) {
+			if (size == 1) { 
+				System.out.println("1. Cappucino			Tall $3.30");	
+			} else if (size == 2) {
+				System.out.println("1. Cappucino			Grande $5.75");
+			} else if (size == 3) {
+				System.out.println("1. Cappucino			Grande $8.25");
+			}
+			
+			System.out.println(quantity + "x");
+		} else if (b.getOrderNum() == 2) {
+			if (size == 1) { 
+				System.out.println("2. Caramel Macchiato			Tall $4.20");	
+			} else if (size == 2) {
+				System.out.println("2. Caramel Macchiato			Grande $6.40");
+			} else if (size == 3) {
+				System.out.println("2. Caramel Macchiato			Venti $9.85");
+			}
+			System.out.println(quantity + "x");
+		} else if (b.getOrderNum() == 3) {
+			if (size == 1) { 
+				System.out.println("3. Matcha Latte			Tall $2.20");	
+			} else if (size == 2) {
+				System.out.println("3. Matcha Latte			Grande $4.95");
+			} else if (size == 3) {
+				System.out.println("3. Matcha Latte			Venti $7.00");
+			}
+			System.out.println(quantity + "x");
+	}
+	}
+}
