@@ -1,0 +1,46 @@
+package Abstract;
+
+public class Pastries extends Menu{
+	int orderNum, order;
+	double price;
+	double cinamonRoll = 15.95;
+	double croissant = 17.55;
+	double blueberryCheesecake = 17.25;
+	double strawberryCheesecake = 16.80;
+	
+	void showList() {
+		System.out.println("Pastries");
+		System.out.println("0. No Pastries			$0.00" + "\n" 
+		+ "1. Cinamon Roll			$15.95" + "\n" + 
+		"2. Croissant			$17.55" + "\n" + 
+		"3. Blueberry Cheesecake			$17.25" + "\n" + 
+		"4. Strawberry Cheesecake			$16.80");
+	}
+	
+	public void setOrderNum(int orderNum) {
+		this.orderNum = orderNum;
+	}
+
+
+	public int getOrderNum() {
+		return orderNum;
+	}
+
+	public int getOrder() {
+		return order;
+	}
+
+	public void setOrder(int order) {
+		this.order = order;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	
+	
+}
